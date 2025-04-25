@@ -4,27 +4,27 @@ user_score = 0
 computer_score = 0
 
 while True:
-    user = input("Выбери (камень, ножницы, бумага) или 'стоп' для выхода: ").lower()
+    user = input("Вибери (камінь, ножиці, папір) або 'стоп' для виходу: ").lower()
     if user == 'стоп':
-        print("Игра окончена.")
+        print("Гру завершено.")
         break
-    if user not in ['камень', 'ножницы', 'бумага']:
-        print("Неверный ввод. Попробуй снова.")
+    if user not in ['камінь', 'ножиці', 'папір']:
+        print("Невірний ввід. Спробуй ще раз.")
         continue
 
-    computer = random.choice(["камень", "ножницы", "бумага"])
-    print("Ты выбрал:", user)
-    print("Компьютер выбрал:", computer)
+    computer = random.choice(["камінь", "ножиці", "папір"])
+    print("Ти обрав:", user)
+    print("Комп'ютер обрав:", computer)
 
     if user == computer:
-        print("Ничья!")
-    elif (user == "камень" and computer == "ножницы") or \
-         (user == "ножницы" and computer == "бумага") or \
-         (user == "бумага" and computer == "камень"):
-        print("Ты победил!")
+        print("Нічия!")
+    elif (user == "камінь" and computer == "ножиці") or \
+         (user == "ножиці" and computer == "папір") or \
+         (user == "папір" and computer == "камінь"):
+        print("Ти переміг!")
         user_score += 1
     else:
-        print("Ты проиграл!")
+        print("Ти програв!")
         computer_score += 1
 
-    print(f"Счёт: Ты {user_score} - {computer_score} Компьютер\n")
+    print(f"Рахунок: Ти {user_score} - {computer_score} Комп'ютер\n")
